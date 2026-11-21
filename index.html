@@ -248,7 +248,7 @@
             'a',
             'flex items-center gap-2.5 text-[#F9DD60] dont',
             `<i class="ph ph-users flex items-center justify-center w-5"></i> 
-       <span class="leading-none" id="${event.slug}-signup">0/${event.limit || 100}</span>`,
+            <span class="leading-none" id="${event.slug}-signup">${event.limit}</span>`,
             {
               href: 'https://daven.haven.hackclub.com/' + event.slug,
               target: '_blank'
@@ -270,8 +270,8 @@
           )
         )
         card.appendChild(infoContainer)
-        const sub = create('a', 'btn-primary', 'Sign Up Now')
-        sub.href = `https://forms.hackclub.com/haven-signup?event=${event.id}`
+        const sub = create('a', 'btn-primary', 'Play the games')
+        sub.href = `/${event.slug}`;
         sub.target = '_blank'
         card.appendChild(sub)
         card.appendChild(
@@ -368,7 +368,7 @@
           j.insta = s[4]?.trim()
           j.slack = s[5]?.trim()
           j.wa = s[6]?.trim()
-          j.limit = parseInt(s[7]?.trim()) || null
+          j.limit = s[7]?.trim() || null
           eventLimits[j.slug] = j.limit
           j.custom = {}
 

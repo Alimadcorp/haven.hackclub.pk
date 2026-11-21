@@ -21,7 +21,7 @@ recjkNQ5LBfwfGg3i,
 haven.isb.hackclub,
 C0BPVR0EVMY,
 ,
-200
+90/200
 ;
 
 lahore,
@@ -30,9 +30,8 @@ maps.app.goo.gl/isJuDMy7f1zt7PnF9,
 recvZSgonjXCIcFSA,
 haven.lhr,
 C0BRVGWHLA1,
-923124503700,
-150,
-Organize=https://alimad.fillout.com/haven-org
+,
+83/150
 ;
 
 peshawar,
@@ -42,18 +41,17 @@ recHvvpPOom2zTNXL,
 haven.peshawar.hackclub,
 C0BTP85CVBJ,
 ,
-100,
-Organize=https://peshawar.fillout.com/haven-organizer
+11/37
 ;
 
 karachi,
-,
-,
+Kickstart,
+maps.app.goo.gl/AttzUHCy895yVFb28,
 rec2xCDW78z5uYYYj,
 haven.karachii.hackclub,
 C0BRVAD1206,
 ,
-100
+21/100
 ;
 
 bahawalpur,
@@ -63,7 +61,7 @@ recZFy6AeLmeY2yjm,
 haven.bwp.hackclub,
 C0C16CVLNNM,
 ,
-100
+46/102
 ;
 
 mirpurkhas,
@@ -73,5 +71,5 @@ reckNKin9u20dMVD5,
 haven.mirpurkhas.hackclub,
 C0C26S81LG0,
 ,
-100
+38/105
 ;
