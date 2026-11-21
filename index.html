@@ -13,26 +13,37 @@
   <meta property="og:title" content="Haven Events in Pakistan" />
   <meta property="og:description"
     content="Hack Club Haven is a global game jam in 200+ cities worldwide for students 13-18" />
-  <meta property="og:image" content="https://haven.hackclub.com/images/haven-logo-color.webp" />
-  <meta property="og:url" content="https://hackclub.pk" />
+  <meta property="og:image" content="https://haven.hackclub.pk/group/isb.png" />
+  <meta property="og:url" content="https://haven.hackclub.pk" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://forms.hackclub.com" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,600;1,400;1,600&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+  <link href="assets/haven.hackclub.com/images/hedgehog.webp" rel="icon" type="image/png" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&amp;family=Jua&amp;display=swap"
     rel="stylesheet" />
   <script src="https://kit.fontawesome.com/25f9210ebd.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <link rel="icon" href="https://haven.hackclub.com/favicon.png" />
   <style>
-    body {
-      font-family: 'Ubuntu', sans-serif;
+    :root {
+      --font-display: 'Darumadrop One', cursive, sans-serif;
+      --font-body: 'Jua', sans-serif;
     }
 
-    .font-mono {
-      font-family: 'Ubuntu Mono', monospace !important;
-      font-weight: 600;
+    body {
+      font-family: var(--font-body);
+      background-color: #588b43;
+      background-image: url("assets/haven.hackclub.com/images/bg.webp");
+      background-size: cover;
+      background-position: top center;
+      background-attachment: fixed;
+    }
+
+    .hed, h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display) !important;
+    }
+
+    #pakistan-map.leaflet-container {
+      background: transparent !important;
     }
   </style>
   <style type="text/tailwindcss">
@@ -73,9 +84,6 @@
         #pakistan-map.ready {
           @apply opacity-100;
         }
-        .leaflet-container {
-          @apply bg-transparent cursor-default;
-        }
         .card {
           @apply bg-cover bg-center;
         }
@@ -100,7 +108,7 @@
     </style>
 </head>
 
-<body class="bg-[#DFA063] text-[#783D2B] min-h-screen antialiased p-6 md:p-12">
+<body class="text-[#fff3b0] min-h-screen antialiased p-6 md:p-12">
   <a href="https://hackclub.com"
     class="dont hover:rotate-[5deg] hover:translate-y-3 transition-transform fixed z-[50] left-[-5px] top-0"
     target="_blank">
@@ -109,7 +117,7 @@
   <div class="max-w-7xl mx-auto mt-16 md:mt-8">
     <header class="mb-12 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
       <div class="md:w-1/2 text-center md:text-left">
-        <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-[#783D2B] mb-4">
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight [text-shadow:2px_2px_2px_#4a2c1199] text-[#fff3b0] mb-4">
           Haven Events in
           <span class="whitespace-nowrap">
             <span class="pk-flag">Pakistan</span><a href="https://haven.hackclub.com"
@@ -118,19 +126,19 @@
             </a>
           </span>
         </h1>
-        <p class="text-[#783D2B] text-sm md:text-lg max-w-2xl mx-auto md:mx-0 mb-4">
+        <p class="text-[#ffe66d] [text-shadow:0px_0px_4px_#4a2c11] text-sm md:text-lg max-w-2xl mx-auto md:mx-0 mb-4">
           The world's largest student-led game jam. It ran in 202 cities of 51 countries around the world. 6 of those
           cities were in Pakistan. 289 students participated out of which 238 made a total of 118 games on the theme
           "Bounce Back".
         </p>
         <div class="p-2 flex items-center md:items-start justify-between flex-col w-full">
-          <p class="text-[#783D2B] max-w-2xl md:text-md text-sm mb-0">
+          <p class="text-[#fff3b0] [text-shadow:2px_2px_2px_#4a2c1199] max-w-2xl md:text-md text-sm mb-0">
             It ran
           </p>
-          <h2 class="text-2xl md:text-4xl font-mono" id="clock" title="Sat 14 November, 2026 at 10 AM">
+          <h2 class="text-2xl md:text-4xl [text-shadow:2px_2px_2px_#4a2c1199]" id="clock" title="Sat 14 November, 2026 at 10 AM">
             November 14-15
           </h2>
-          <p class="text-md text-[#783D2B] flex items-center gap-1">
+          <p class="text-md text-[#fff3b0] flex items-center gap-1">
             <i class="ph ph-eye text-[20px] translate-y-[0.5px]"></i>
             <span id="spec">1</span>
           </p>
@@ -144,7 +152,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start"></div>
     <section class="mt-16">
       <h2
-        class="text-3xl md:text-4xl font-bold text-[#783D2B] mb-6 text-center underline decoration-[#783D2B] decoration-2 underline-offset-4">
+        class="text-3xl md:text-4xl font-bold text-[#fff3b0] mb-6 text-center underline decoration-[#783D2B] decoration-2 underline-offset-4">
         Group photos!
       </h2>
       <div class="relative mx-auto w-full max-w-4xl md:max-w-6xl h-[520px] md:h-[640px] mt-10">
@@ -167,7 +175,7 @@
   <div id="s-modal"
     class="fixed inset-0 z-[100] flex items-center justify-center bg-black/70 md:backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-200">
     <div class="card max-w-[90vw] w-md mx-4 p-6 relative border-[#783D2B]">
-      <button id="close-mod" class="absolute top-2 right-2 text-[#DFA063] hover:text-[#783D2B] transition-colors">
+      <button id="close-mod" class="absolute top-2 right-2 text-[#DFA063] hover:text-[#fff3b0] transition-colors">
         <i class="ph ph-x"></i>
       </button>
       <h3 id="mod-h" class="text-xl font-bold text-white mb-6 pr-6"></h3>
@@ -456,8 +464,8 @@
 
         L.polygon([world, ...holes], {
           stroke: false,
-          fillColor: '#DFA063',
-          fillOpacity: 1,
+          fillColor: '#0000000',
+          fillOpacity: 0,
           interactive: false
         }).addTo(map)
 
