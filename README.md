@@ -1,4 +1,4 @@
-## Havens.PK
+## haven.hackclub.pk
 
 ### A website that lists all Haven events in Pakistan.
 
